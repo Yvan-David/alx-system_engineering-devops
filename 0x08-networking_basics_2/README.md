@@ -1,1 +1,1 @@
-network_basics 2 0.0.0.0 localhost 
+network_basics2 0.0.0.0 localhost 
