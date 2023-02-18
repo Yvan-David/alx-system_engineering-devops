@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
-#displays content of current directory, only the part after the first -
-for file in *
+#a Bash script that displays the time for 12 hours and 59 minutes.
+hour=0
+while [ "$hour" -le 12 ]
 do
-	echo "$file" | cut -d '-' -f 2
+	echo "Hour: $hour"
+	min=1
+	while [ "$min" -le 59 ]
+	do
+		echo "$min"
+		((min++))
+	done
+	((hour++))
 done
