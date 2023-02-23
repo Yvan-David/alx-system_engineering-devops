@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#using nested loops while
+i=0
+while ((i <= 12))
+do
+    j=1
+    if ((i == 0))
+    then
+        echo "Hour: $i"
+    fi
+    while ((j <= 59))
+    do 
+        echo "$j"
+        if ((j == 59 && i != 12))
+        then
+            echo "Hour: $((i+1))"
+        fi
+        ((j++))
+    done
+    ((i++))
+done
