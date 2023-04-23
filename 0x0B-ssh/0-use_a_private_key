@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+cat ~/.ssh/id_rsa.pub | ssh 94865-web-01@54.152.220.161 "cat >> ~/.ssh/school"
