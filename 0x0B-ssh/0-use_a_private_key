@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # bash script that ssh to my server
-cat ~/.ssh/school | ssh ubuntu@54.152.220.161 "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/"
-ssh ubuntu@54.152.220.161
+ssh -i ~/.ssh/school ubuntu@54.152.220.161
