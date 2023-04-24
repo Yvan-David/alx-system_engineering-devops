@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# use a public key to ssh into a server
-cat ~/.ssh/id_rsa.pub | ssh 94865-web-01@54.152.220.161 "cat >> ~/.ssh/school"
+# bash script that ssh to my server
+cat ~/.ssh/school | ssh ubuntu@54.152.220.161 "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/"
+ssh ubuntu@54.152.220.161
