@@ -1,4 +1,6 @@
-Host 94865-web-01
-    HostName 54.152.220.161
-    User ubuntu
-    IdentityFile ~/.ssh/school
+# This is an SSH config file to connect to a host by refusing
+#password and using identity in ~/.ssh/school
+
+Host *
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
