@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+# checks who is the root user
+su -c whoami brown
