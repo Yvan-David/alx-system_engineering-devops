@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+# make nginx listen at port 80
+sudo ufw default allow 80
+
