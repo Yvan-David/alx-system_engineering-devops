@@ -30,7 +30,7 @@ defaults
     timeout server  10000
 
 listen hbnb
-    bind 0.0.0.0:80
+    bind 100.26.133.148 :80
     mode http
     stats enable
     stats uri /haproxy?stats
@@ -41,4 +41,4 @@ listen hbnb
     server 94865-web-02 35.175.130.231:80 check
 " >> /etc/haproxy/haproxy.cfg
 
-service haproxy start
+sudo service haproxy start
