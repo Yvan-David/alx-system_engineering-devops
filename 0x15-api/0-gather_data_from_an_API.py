@@ -27,7 +27,7 @@ if __name__ == "__main__":
             print(f"Employee {json_dict[n].get('username')}", end='')
             print(f" is done with tasks({done_tasks}/{total_tasks}):")
             for i in content:
-                print(f"\t{i}")
+                print(f"\t {i}")
         else:
             print("No result")
 
