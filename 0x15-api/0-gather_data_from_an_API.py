@@ -7,8 +7,10 @@ import sys
 
 if __name__ == "__main__":
 
-    url = "https://jsonplaceholder.typicode.com/todos/"
-    r = requests.get(url)
+    url1 = "https://jsonplaceholder.typicode.com/todos/"
+    url2 = "https://jsonplaceholder.typicode.com/users"
+    r = requests.get(url1)
+    r1 = requests.get(url2)
     total_tasks = 0
     done_tasks = 0
     n = int(sys.argv[1])
@@ -16,6 +18,7 @@ if __name__ == "__main__":
 
     try:
         json_dict = r.json()
+        json_dict1 = r1.json()
         if json_dict:
             for i in range(1, json_dict.__len__()):
                 if json_dict[i].get('userId') == n:
@@ -24,7 +27,7 @@ if __name__ == "__main__":
                    json_dict[i].get('completed') is True:
                     done_tasks += 1
                     content.append(json_dict[i].get('title'))
-            print(f"Employee {json_dict[n].get('username')}", end='')
+            print(f"Employee {json_dict1[(n - 1)].get('name')}", end='')
             print(f" is done with tasks({done_tasks}/{total_tasks}):")
             for i in content:
                 print(f"\t {i}")
