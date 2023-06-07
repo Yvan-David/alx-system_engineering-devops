@@ -4,6 +4,6 @@ file { '/var/www/html/index.html':
       content => 'Holberton',
       owner   => 'root',
       group   => 'root',
-      mode    => '611'
+      mode    => '0611'
 
 }
