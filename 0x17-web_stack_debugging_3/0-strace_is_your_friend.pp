@@ -1,5 +1,9 @@
-# use exec resource to fix a server
-exec { 'fix-wordpress':
-        command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-        provider => shell,
+# resolve server error 500
+file { '/var/www/html/index.html':
+      ensure  => 'file',
+      content => 'Holberton',
+      owner   => 'root',
+      group   => 'root',
+      mode    => '611'
+
 }
