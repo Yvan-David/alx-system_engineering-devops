@@ -6,8 +6,12 @@ import requests
 
 def number_of_subscribers(subreddit):
     """Return the number of subscribers of a subreddit"""
-    r = requests.get(f'https://www.reddit.com/r/{subreddit}/about.json',
-                     headers={'User-Agent': 'reddit/2023.20.0'})
-    if (r.status_code >= 300):
-        return (0)
-    return (r.json().get('data')['subscribers'])
+    headers = {
+            "User-Agent": "Mozilla/5.0"
+            }
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    resp = requests.get(url, headers=headers, allow_redirects=False)
+    try:
+        return resp.json().get('data').get('subscribers')
+    except AttributeError:
+        return 0
