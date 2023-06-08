@@ -14,7 +14,7 @@ def recurse(subreddit, hot_list=[], counter=0, after=''):
     try:
         posts = resp.json().get('data').get('children')
         counter += len(posts)
-        print(resp.json().get('data').get('after'))
+        after = resp.json().get('data').get('after')
         if after is None:
             raise AttributeError
         [hot_list.append(post['data']['title']) for post in posts]
