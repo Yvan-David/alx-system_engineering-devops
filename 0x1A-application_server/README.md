@@ -1,1 +1,1 @@
-<h1 style = 'color:black'> deploying a flask application to a nginx server </h1>
+<h1 style = 'color:gold'> deploying a flask application to an nginx server </h1>
